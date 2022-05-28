@@ -1,8 +1,12 @@
-const express= require("express");
-const app = express();
 
-app.get("/", (req, res) => {
-    res.send("backend itec");
-});
+const express = require('express')
+const app = express()
+const port = 3001
 
-app.listen(3001, () => console.log("connected to port 3001"));
+app.get('/', (request, response) => {
+  response.send('Hello World!')
+})
+
+app.listen(port, () => {
+  console.log(`Example app listening at http://localhost:${port}`)
+})
